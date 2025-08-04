@@ -19,6 +19,6 @@ private:
 	void update();
 	void render();
 	void startPosition();
-	void movePlayer();                // функция хода игрока
+	void movingChips();                // функция перемещение фишек
 };
 

@@ -28,7 +28,7 @@ void Game::processEvent()
         if (event.type == sf::Event::MouseButtonPressed)
         {
             if (event.mouseButton.button == sf::Mouse::Left) {
-                movePlayer();
+                movingChips();
             }
         }
     }
@@ -46,7 +46,7 @@ void Game::update()
 
 void Game::render()
 {
-    window.clear();
+    window.clear(sf::Color(0,0,102));
     window.draw(bgSprite);
     for (int i = 0; i < 24; i++) {
         for (auto el : field[i]) {
@@ -70,8 +70,8 @@ void Game::startPosition()
         field[12].push_back(chip);
     }
 }
-
-void Game::movePlayer()
+// функция перемещение фишек
+void Game::movingChips()
 {
     double distance;
     ////////// проверяет клик мыши на попадание на фишку //////////

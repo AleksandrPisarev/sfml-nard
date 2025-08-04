@@ -38,12 +38,11 @@ sf::Color Chip::getColor()
 //делает контур зеленым когда на фишку кликнули мышкой
 void Chip::on()
 {
-	shape.setOutlineThickness(-3);
-	shape.setOutlineColor(sf::Color::Green);
+	shape.setOutlineThickness(-2);
+	shape.setOutlineColor(sf::Color(239,255,0));
 }
 // возвращает фишке прежний цвет
 void Chip::off()
 {
-	shape.setOutlineThickness(-3);
-	shape.setOutlineColor(sf::Color::Red);
+	shape.setOutlineThickness(0);
 }

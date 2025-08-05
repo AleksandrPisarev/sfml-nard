@@ -28,6 +28,7 @@ void Game::processEvent()
         if (event.type == sf::Event::MouseButtonPressed)
         {
             if (event.mouseButton.button == sf::Mouse::Left) {
+                rollofDice();
                 movingChips();
             }
         }
@@ -52,6 +53,9 @@ void Game::render()
         for (auto el : field[i]) {
             el.render(window);
         }
+    }
+    for (int i = 0; i < dice.size(); i++) {
+        dice[i].render(window);
     }
     window.display();
 }
@@ -105,5 +109,27 @@ void Game::movingChips()
             }
         }
         activeChip = -1;
+    }
+}
+// функция бросок кубиков
+void Game::rollofDice()
+{
+    int random[2];
+    for (int i = 0; i < 2; ++i) {
+        random[i] = rand() % (6 - 1 + 1) + 1;
+    }
+    if (random[0] == random[1]) {
+        for (int i = 0; i < 4; i++) {
+            Dice cube(random[0]);
+            cube.setPosition(i * 40);
+            dice.push_back(cube);
+        }
+    }
+    else {
+        for (int i = 0; i < 2; i++) {
+            Dice cube(random[i]);
+            cube.setPosition(i * 40);
+            dice.push_back(cube);
+        }
     }
 }

@@ -39,7 +39,7 @@ sf::Color Chip::getColor()
 void Chip::on()
 {
 	shape.setOutlineThickness(-2);
-	shape.setOutlineColor(sf::Color(239,255,0));
+	shape.setOutlineColor(sf::Color::Green);
 }
 // возвращает фишке прежний цвет
 void Chip::off()

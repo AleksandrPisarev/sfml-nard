@@ -4,6 +4,7 @@ Dice::Dice(int number)
 	rectangle.setSize(sf::Vector2f(30, 30));
 	rectangle.setFillColor(sf::Color::White);
 	rectangle.setOrigin(rectangle.getSize().x / 2, rectangle.getSize().y / 2);
+	sf::CircleShape circle;
 	circle.setRadius(3);
 	circle.setFillColor(sf::Color::Black);
 	circle.setOrigin(circle.getRadius(), circle.getRadius());
@@ -63,4 +64,9 @@ void Dice::setPosition(int offset)
 		}
 		break;
 	}
+}
+
+int Dice::getCircles()
+{
+	return circles.size();
 }

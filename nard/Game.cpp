@@ -102,7 +102,7 @@ void Game::movingChips()
     ////////// проверяет клик мыши на то место куда необходимо переставить фишку //////////
     else {
         for (int i = 0; i < 24; i++) {
-            if (i > activeChip) {
+            if ((i > activeChip) && (field[i].size() == 0 || (field[i][0].getColor() == sf::Color::Red))) {
                 // переменная которая определяет расстояние от клика мышки до центра того места куда надо переставить фишку
                 // использовал массив fieldCoord класса Chip для этого сделал класс Game дружественным поле fieldCoord статическим
                 distance = sqrt(pow((event.mouseButton.x - Chip::fieldCoord[i].x), 2) + pow((event.mouseButton.y - Chip::fieldCoord[i].y), 2));

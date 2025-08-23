@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Chip.cpp" />
+    <ClCompile Include="Dice.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="nard.cpp" />
   </ItemGroup>
@@ -136,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Chip.h" />
+    <ClInclude Include="Dice.h" />
     <ClInclude Include="Game.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

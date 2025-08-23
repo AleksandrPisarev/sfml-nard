@@ -14,6 +14,7 @@ sf::Vector2f Chip::fieldCoord[24] = {
 
 int main()
 {
+	srand(time(0));
 	Game game;
 	game.run();
 }
